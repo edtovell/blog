@@ -7,6 +7,7 @@ SITENAME = "Ed's Blog"
 SITEURL = ''
 
 PATH = 'content'
+OUTPUT_PATH = 'docs'
 
 TIMEZONE = 'GMT'
 
