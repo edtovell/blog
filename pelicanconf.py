@@ -9,6 +9,8 @@ SITEURL = '/blog'
 PATH = 'content'
 OUTPUT_PATH = 'docs'
 
+ARTICLE_EXCLUDES = ['sample']
+
 TIMEZONE = 'GMT'
 
 DEFAULT_LANG = 'en'
