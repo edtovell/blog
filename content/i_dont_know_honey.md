@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Ed's Blog - Ed</title>
-        <link rel="stylesheet" href="/blog/theme/css/main.css" />
-</head>
+Title: I Don't Know, Honey
+Date: 2020-Jan-06
+Modified: 2020-Jan-06
+Category: misc
+Tags: short stories
+Slug: i_dont_know_honey
+Authors: Ed
+Summary:
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/blog/">Ed's Blog </a></h1>
-                <nav><ul>
-                    <li><a href="/blog/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
+_a philosophical discourse between mother and child_
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="/blog/i_dont_know_honey.html">I Don't Know, Honey</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2020-01-06T00:00:00+00:00">
-                Published: Mon 06 January 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-01-06T00:00:00+00:00">
-                Updated: Mon 06 January 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/blog/author/ed.html">Ed</a>
-        </address>
-<p>In <a href="/blog/category/misc.html">misc</a>.</p>
-<p>tags: <a href="/blog/tag/short-stories.html">short stories</a> </p>
-</footer><!-- /.post-info --><p><em>a philosophical discourse between mother and child</em></p>
-<p>CHILD: Mum, why is the sky that colour?
+CHILD: Mum, why is the sky that colour?
 MOTHER: I don't know, honey.
 CHILD: Because I read on the Internet that it has to do with sunlight coming through the atmosphere and that's what colours it.
 MOTHER: Yes, that sounds right.
@@ -42,9 +19,11 @@ CHILD: Yeah because I've never to space but I've seen pictures and it's always b
 MOTHER: Yes, that makes sense.
 CHILD: And it looks like that because the atmosphere has a colour when the Sun shines through it, but it doesn't when there's no Sun like at night because then you can see the black, and you can see space because you can see the stars and things that are in space. And the stars are still there when the Sun comes out but you can't see them because the Sun colours the atmosphere and it covers them up.
 MOTHER: I don't know about that, honey, it's very complicated. I'm sure you're mostly right, but it's always a bit more complicated. I was always taught that you can't see the stars because the Sun is so bright, which is slightly different from the atmosphere being coloured.
-CHILD: Oh.</p>
-<p><em>~</em></p>
-<p>MOTHER: But I don't know for sure. It could be both. or we could both be wrong, and it's some other reason entirely.
+CHILD: Oh.
+
+_~_
+
+MOTHER: But I don't know for sure. It could be both. or we could both be wrong, and it's some other reason entirely.
 CHILD: Yes. But I like your reason, Mum.
 MOTHER: OK honey.
 CHILD: You're really clever and you're much older than me so you know more about it so you're probably right.
@@ -52,9 +31,11 @@ MOTHER: But you're much cleverer than me, dear!
 CHILD: Yes but I'm only little, Mum, so I don't know as much. I think when I get to be as old as you then I will be a bit cleverer than you, but not yet because it's not just cleverness that counts but also all the things you know, and you're really clever and you're old enough to know a lot of things. You learn more things when you get older.
 MOTHER: Thank you, honey.
 CHILD: Yes and when I am as old as you I will be really clever AND I'll know a lot of things.
-MOTHER: Yes dear, you will be very good at thinking about things. And you're already very clever now, and you know lots of things, even at your age, so you're much cleverer than lots of adults I know. I'm very proud of you.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum, the sky has changed colour.
+MOTHER: Yes dear, you will be very good at thinking about things. And you're already very clever now, and you know lots of things, even at your age, so you're much cleverer than lots of adults I know. I'm very proud of you.
+
+_~_
+
+CHILD: Mum, the sky has changed colour.
 MOTHER: Yes, it has. Why is that?
 CHILD: I don't know. Maybe it has to do with how much atmosphere there is.
 MOTHER: No, honey, there's always the same amount of atmosphere.
@@ -67,9 +48,11 @@ MOTHER: Oh ... oh I see what you mean, yes. Yes honey, that does make sense. Tha
 CHILD: And that's why it's green now.
 MOTHER: Yes, honey.
 CHILD: And not brown any more.
-MOTHER: Yes, honey.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum.
+MOTHER: Yes, honey.
+
+_~_
+
+CHILD: Mum.
 MOTHER: Yes, honey?
 CHILD: Why did people used to say the sky is blue?
 MOTHER: I don't know, honey.
@@ -86,18 +69,22 @@ MOTHER: I don't know, honey.
 CHILD: Oh. Do you know what it means?
 MOTHER: No, I don't think anyone speaks it any more.
 CHILD: Oh. So nobody knows?
-MOTHER: I don't know, honey.</p>
-<p><em>~</em></p>
-<p>CHILD: I think it means "Everything's Great!" because sometimes you say things like that too.
+MOTHER: I don't know, honey.
+
+_~_
+
+CHILD: I think it means "Everything's Great!" because sometimes you say things like that too.
 MOTHER: No, I don't think that's right.
 CHILD: Because sometimes a bad thing happens like you drop your sandwich on the floor and you say "fucking fantastic"...
 MOTHER: Language, dear.
 CHILD: Sorry mum. You say "fantastic" but it's not really fantastic it's quite bad, so it's sort of funny because that's the wrong thing to say.
 MOTHER: Yes, dear.
 CHILD: Yes, so I think seller vee means something like that, like "everything's great!" or "cool!" or something like that.
-MOTHER: Yes, dear.</p>
-<p><em>~</em></p>
-<p>CHILD: Oh yeah so you know how seller vee is a saying?
+MOTHER: Yes, dear.
+
+_~_
+
+CHILD: Oh yeah so you know how seller vee is a saying?
 MOTHER: Yes.
 CHILD: Yes so that's a saying for when something bad happens, but there are different sayings for other things.
 MOTHER: Mhm.
@@ -127,9 +114,11 @@ CHILD: Oh. Does anyone know?
 MOTHER: I don't know, honey.
 CHILD: So can you say "How long is a piece of string?" now?
 MOTHER: Maybe. I don't know if that makes sense. Maybe.
-CHILD. Oh.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum?
+CHILD. Oh.
+
+_~_
+
+CHILD: Mum?
 MOTHER: Yes?
 CHILD: How do you know it's pope and not poop?
 MOTHER: I don't know, honey.
@@ -137,9 +126,11 @@ CHILD: Oh. So it might be poop then.
 MOTHER: No, dear, it's definitely pope.
 CHILD: Why?
 MOTHER: I don't know, I heard it somewhere, but it's definitely pope.
-CHILD: OK.</p>
-<p><em>~</em></p>
-<p>CHILD: And one of the questions was "Why is the sky blue?" and it confused me.
+CHILD: OK.
+
+_~_
+
+CHILD: And one of the questions was "Why is the sky blue?" and it confused me.
 MOTHER: Oh yes? Why?
 CHILD: Because we know a lot about the sky, just like we were just talking about, about how underneath it's just space really but it looks like it has a colour because of sunlight in the atmosphere makes it look like it's been coloured in.
 MOTHER: Yes, that's right.
@@ -150,9 +141,11 @@ MOTHER: Well let me think. I haven't heard that one, so it must be very old. May
 CHILD: No, I think they did.
 MOTHER: I mean they might not have known how it worked.
 CHILD: No, I think they did.
-MOTHER: OK.</p>
-<p><em>~</em></p>
-<p>MOTHER: Are you worried about the blue?
+MOTHER: OK.
+
+_~_
+
+MOTHER: Are you worried about the blue?
 CHILD: The what?
 MOTHER: The blue - how they would say "Why is the sky blue?", when it isn't.
 CHILD: No, I know about that because it's like when you say "clear as mud" when things are clear even though mud isn't clear, and how you say "fucking fantastic"...
@@ -162,50 +155,4 @@ MOTHER: Ah yes, ok. I suppose that makes sense. Because I was thinking that mayb
 CHILD: Yes.
 MOTHER: You're very clever.
 CHILD: Yes, but so are you Mum.
-MOTHER: I don't know, honey.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-
-            <li><article class="hentry">
-                <header>
-                    <h1><a href="/blog/predictions-2020.html" rel="bookmark"
-                           title="Permalink to Predictions For 2020">Predictions For 2020</a></h1>
-                </header>
-
-                <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-01-01T00:00:00+00:00">
-                Published: Wed 01 January 2020
-        </abbr>
-		<br />
-        <abbr class="modified" title="2020-01-01T00:00:00+00:00">
-                Updated: Wed 01 January 2020
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="/blog/author/ed.html">Ed</a>
-        </address>
-<p>In <a href="/blog/category/misc.html">misc</a>.</p>
-
-</footer><!-- /.post-info -->                
-                <a class="readmore" href="/blog/predictions-2020.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-                </ol><!-- /#posts-list -->
-                </section><!-- /#content -->
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
-</body>
-</html>
+MOTHER: I don't know, honey.
