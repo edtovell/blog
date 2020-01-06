@@ -1,8 +1,7 @@
 Title: I Don't Know, Honey
 Date: 2020-Jan-06
 Modified: 2020-Jan-06
-Category: misc
-Tags: short stories
+Category: short stories
 Slug: i_dont_know_honey
 Authors: Ed
 Summary:
