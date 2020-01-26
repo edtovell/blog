@@ -28,7 +28,7 @@ So for the love of all that is holy...
 
 If you're new to the code base because you just started a new job or joined a project, or if you had a rough night last night and you're a bit hungover, or for any silly human reason you aren't 100% on board with what's going on, your brain might look at this setup and go
 
-*"**A** is the main one, so I can deploy to **B** and swap them..."*
+> *"**A** is the main one, so I can deploy to **B** and swap them..."*
 
 ... which 50% of the time will RUIN EVERYTHING. If Server B is live, then you just took down a live server to deploy code to it, then rolled back your service to whatever was running on Server A. "A" and "B" are names from a well-known series called the Latin Alphabet, where "A" is the *first* letter and "B" is the *second*. So everyone assumes that "A" is the **main one**.
 
@@ -48,7 +48,7 @@ I use AWS a lot (obviously because I love Bezos and I don't think he has enough 
 
 Leaving aside that this person has called their servers "primary" and "secondary" (grr), the dashboard is helpfully telling us that both servers are healthy by colour-coding them as green. When they start getting overloaded they turn yellow, and if they fail they turn red. Handy, good, useful, etc...
 
-UNTIL you come to deployment time, and let's say you followed convention and called your servers "GREEN" and "BLUE". If you're tired or drunk or new (or **green**?) or out of sorts for whatever reason, you might look at the dashboard and conclude that "GREEN" is the live one. And 50% of the time, that conclusion is wrong.
+UNTIL you come to deployment time, and let's say you followed convention and called your servers "GREEN" and "BLUE". If you're tired or drunk or new (or *green??*) or out of sorts for whatever reason, you might look at the dashboard and conclude that "GREEN" is the live one. And 50% of the time, that conclusion is wrong.
 
 Even if you're the kind of person who knows the difference between names for colours and actual colours, and who prefers skimming command line text output to relying on web interfaces, Elastic Beanstalk provides a helpful command line tool that includes a status monitor, which outputs something like this (again, I found it from a quick search):
 
@@ -62,7 +62,7 @@ Luckily, there is a solution. You may also have heard that the A/B or Green/Blue
 
 "RED" is no better a name than "GREEN" for precisely the same reason.
 
-However, the Red/Black naming convention does provide a clue to an *actual* solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is *better* or *worth more* (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it * if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing.
+However, the Red/Black naming convention does provide a clue to an *actual* solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is *better* or *worth more* (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it (if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing).
 
 So the best thing to do would be to name your servers after a common, sentiment-neutral pairing that is unlikely to be confused with some other naming convention, and doesn't imply anything about the seniority or status of the instances. So I suggest we all
 
