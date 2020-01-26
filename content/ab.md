@@ -1,6 +1,6 @@
 Title: A Sensible Naming Convention for A/B Deployment
-Date: 2020-Jan-18
-Modified: 2020-Jan-18
+Date: 2020-Jan-26
+Modified: 2020-Jan-26
 Category: dev stuff
 Slug: ab_naming
 Authors: Ed
