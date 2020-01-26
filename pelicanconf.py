@@ -10,6 +10,7 @@ PATH = 'content'
 OUTPUT_PATH = 'docs'
 
 ARTICLE_EXCLUDES = ['sample']
+STATIC_PATHS = ['images']
 
 TIMEZONE = 'GMT'
 

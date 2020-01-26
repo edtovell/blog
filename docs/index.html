@@ -10,6 +10,7 @@
         <header id="banner" class="body">
                 <h1><a href="/blog/">Ed's Blog </a></h1>
                 <nav><ul>
+                    <li><a href="/blog/category/dev-stuff.html">dev stuff</a></li>
                     <li><a href="/blog/category/misc.html">misc</a></li>
                     <li><a href="/blog/category/short-stories.html">short stories</a></li>
                 </ul></nav>
@@ -17,7 +18,82 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/blog/i_dont_know_honey.html">I Don't Know, Honey</a></h1>
+                    <h1 class="entry-title"><a href="/blog/ab_naming.html">A Sensible Naming Convention for A/B Deployment</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2020-01-18T00:00:00+00:00">
+                Published: Sat 18 January 2020
+        </abbr>
+		<br />
+        <abbr class="modified" title="2020-01-18T00:00:00+00:00">
+                Updated: Sat 18 January 2020
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/blog/author/ed.html">Ed</a>
+        </address>
+<p>In <a href="/blog/category/dev-stuff.html">dev stuff</a>.</p>
+
+</footer><!-- /.post-info --><h1>What is A/B Deployment?</h1>
+<p><strong><em>Obviously skip this bit if you know what it is, it gets more interesting afterwards</em></strong></p>
+<p>It's a low-risk way of updating your web app when you need to maintain uptime. The technique is explained in the movie <em>Fight Club</em>.</p>
+<p>Before cinemas went digital, projectors came in pairs. The film would come on several reels, so you need to do some manoeuvring to get a movie to play straight through with no interruption. You set up your first projector with the first reel and press play, and you rig up the other projector with the second reel. Just before the first reel comes to an end, you press play on the second projector and switch them. The audience sees one continuous movie, but it's being projected from the second machine now. Now you can take the first reel down and wind it back and put it away, then set up your first projector with the <em>third</em> reel and do the whole thing again. And again and again until the film ends.</p>
+<p>You can pull the same trick with web services. Once you've built an app and put it on a running server and people are using it, you might not be able risk any downtime. So instead of restarting the server every time you need to deploy changes to your code, you can use a second server and pull the old switcheroo. With two servers, you can keep your service live and ready on server A, while you deploy and restart and test and whatnot on server B. When you're sure it's ready, you swap the DNS CNAMEs and everybody's using the updated service, none the wiser.</p>
+<h1>So what's the problem?</h1>
+<p>It's a good system. Swapping CNAMEs is very easy and fast, so nobody will notice the switch. You get an extra server to tinker and play around with while your service stays live, and if you <em>do</em> deploy some bad code by accident and you catch it straight away, then you can just swap CNAMEs again and roll back to the previous version. No harm done. It's a good system.</p>
+<p>The main source of trouble in this otherwise good system is that either one of your servers could be the live one. It's a good system as long as you keep track of which server is the live one. Don't touch the live one while it's live. It's important that you be able to tell at a glance which server is the live one. They need names so you can tell them apart, but either one could be live at any time.</p>
+<p>So for the love of all that is holy...</p>
+<h1>DON'T CALL YOUR SERVERS "A" and "B"</h1>
+<p>If you're new to the code base because you just started a new job or joined a project, or if you had a rough night last night and you're a bit hungover, or for any silly human reason you aren't 100% on board with what's going on, your brain might look at this setup and go</p>
+<p><em>"<strong>A</strong> is the main one, so I can deploy to <strong>B</strong> and swap them..."</em></p>
+<p>... which 50% of the time will RUIN EVERYTHING. If Server B is live, then you just took down a live server to deploy code to it, then rolled back your service to whatever was running on Server A. "A" and "B" are names from a well-known series called the Latin Alphabet, where "A" is the <em>first</em> letter and "B" is the <em>second</em>. So everyone assumes that "A" is the <strong>main one</strong>.</p>
+<p>To make things worse, I once inherited a stack where the servers were called "A" and "B", but also the CNAMEs were called <code>...service/api/whatever...</code> and <code>...service-b/api/whatever...</code>, so half the time "B" would be live while "A" is serving <strong>service-b</strong>. It takes a little bit of brainwork to figure out what's happening, and if you have to think about it then you can make mistakes.</p>
+<p>So you shouldn't call your servers anything from a series. Don't call them "1 and 2" or "Alpha and Beta" or "Batman and Robin" or anything like that. Don't.</p>
+<p>It is for precisely this reason that the A/B Deployment pattern is sometimes also known as <strong>Green/Blue Deployment</strong>, which surely fixes everything right?</p>
+<h1>DON'T CALL YOUR SERVERS "GREEN" AND "BLUE"</h1>
+<p>Colours don't normally come "in order" like letters or numbers or superheroes, but they do have unhelpful connotations that confuse things. The colour green, for example, is generally associated with "good" or "health" or "go" or "safe", that sort of thing, which is ironic in this case because it's a problem.</p>
+<p>I use AWS a lot (obviously because I love Bezos and I don't think he has enough money), and this is what the Elastic Beanstalk dashboard looks like from a search I did:</p>
+<p><img alt="The servers, they are both green" src="/blog/images/eb-dash.png"></p>
+<p>Leaving aside that this person has called their servers "primary" and "secondary" (grr), the dashboard is helpfully telling us that both servers are healthy by colour-coding them as green. When they start getting overloaded they turn yellow, and if they fail they turn red. Handy, good, useful, etc...</p>
+<p>UNTIL you come to deployment time, and let's say you followed convention and called your servers "GREEN" and "BLUE". If you're tired or drunk or new (or <strong>green</strong>?) or out of sorts for whatever reason, you might look at the dashboard and conclude that "GREEN" is the live one. And 50% of the time, that conclusion is wrong.</p>
+<p>Even if you're the kind of person who knows the difference between names for colours and actual colours, and who prefers skimming command line text output to relying on web interfaces, Elastic Beanstalk provides a helpful command line tool that includes a status monitor, which outputs something like this (again, I found it from a quick search):</p>
+<p><img alt="&quot;Health: Green&quot;" src="/blog/images/eb-status.png"></p>
+<p>And even though it clearly only says "Green" under "Health" and not "Application Name" or "Environment ID" or any other heading, <em>the fact that is says "Green" at all</em> is probably enough to mislead somebody just skimming for keywords.</p>
+<p>Luckily, there is a solution. You may also have heard that the A/B or Green/Blue Deployment pattern is also commonly known as <strong>Red/Black Deployment</strong>, which ...</p>
+<h1>DON'T CALL YOUR SERVERS "RED" AND "BLACK"</h1>
+<p>"RED" is no better a name than "GREEN" for precisely the same reason.</p>
+<p>However, the Red/Black naming convention does provide a clue to an <em>actual</em> solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is <em>better</em> or <em>worth more</em> (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it - if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing.</p>
+<p>So the best thing to do would be to name your servers after a common, sentiment-neutral pairing that is unlikely to be confused with some other naming convention, and doesn't imply anything about the seniority or status of the instances. So I suggest we all</p>
+<h1>CALL YOUR SERVERS "PINK" AND "BLUE"</h1>
+<p>Allow me to make the case thusly:
+ - Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
+ - The binary is neutral in terms of seniority - neither girls or boys are better or more important, so either one could be in charge at a given time.
+ - They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
+ - The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.
+ - Pink and blue are (along with white) the colours of the <a href="https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg">Transgender Pride flag</a>, which hopefully should spark a productive conversation about inclusivity in your workplace.
+ - As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the <em>actually</em> live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.</p>
+<p>The only downsides I can think of are:
+ - Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles
+ - This is entirely too hard to be thinking about such a mild problem</p>
+<p>See, it's a practically flawless system!</p>
+<p>Other acceptable naming conventions for the Pink/Blue Deployment (hey, it's catching on!) include:
+ - Square/Circle
+ - Laurel/Hardy
+ - Jessie/James
+ - Wilbur/Orville (because nobody remembers which one did the flying anyway)</p>
+<p>Suggestions welcome!</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/blog/i_dont_know_honey.html" rel="bookmark"
+                           title="Permalink to I Don't Know, Honey">I Don't Know, Honey</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-01-06T00:00:00+00:00">
                 Published: Mon 06 January 2020
@@ -32,143 +108,10 @@
         </address>
 <p>In <a href="/blog/category/short-stories.html">short stories</a>.</p>
 
-</footer><!-- /.post-info --><p><em>a philosophical discourse between mother and child</em></p>
-<p>CHILD: Mum, why is the sky that colour?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: Because I read on the Internet that it has to do with sunlight coming through the atmosphere and that's what colours it.</p>
-<p>MOTHER: Yes, that sounds right.</p>
-<p>CHILD: Because you know how in space it's black?</p>
-<p>MOTHER: Yes.</p>
-<p>CHILD: Yeah because I've never to space but I've seen pictures and it's always black, but that's just the sky too. It's the same sky. But if you're not in the atmosphere it's black, so that's probably the colour that it really is, but when you're in the atmosphere like we are then it's not black, the atmosphere colours it.</p>
-<p>MOTHER: Yes, that makes sense.</p>
-<p>CHILD: And it looks like that because the atmosphere has a colour when the Sun shines through it, but it doesn't when there's no Sun like at night because then you can see the black, and you can see space because you can see the stars and things that are in space. And the stars are still there when the Sun comes out but you can't see them because the Sun colours the atmosphere and it covers them up.</p>
-<p>MOTHER: I don't know about that, honey, it's very complicated. I'm sure you're mostly right, but it's always a bit more complicated. I was always taught that you can't see the stars because the Sun is so bright, which is slightly different from the atmosphere being coloured.</p>
-<p>CHILD: Oh.</p>
-<p><em>~</em></p>
-<p>MOTHER: But I don't know for sure. It could be both. or we could both be wrong, and it's some other reason entirely.</p>
-<p>CHILD: Yes. But I like your reason, Mum.</p>
-<p>MOTHER: OK honey.</p>
-<p>CHILD: You're really clever and you're much older than me so you know more about it so you're probably right.</p>
-<p>MOTHER: But you're much cleverer than me, dear!</p>
-<p>CHILD: Yes but I'm only little, Mum, so I don't know as much. I think when I get to be as old as you then I will be a bit cleverer than you, but not yet because it's not just cleverness that counts but also all the things you know, and you're really clever and you're old enough to know a lot of things. You learn more things when you get older.</p>
-<p>MOTHER: Thank you, honey.</p>
-<p>CHILD: Yes and when I am as old as you I will be really clever AND I'll know a lot of things.</p>
-<p>MOTHER: Yes dear, you will be very good at thinking about things. And you're already very clever now, and you know lots of things, even at your age, so you're much cleverer than lots of adults I know. I'm very proud of you.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum, the sky has changed colour.</p>
-<p>MOTHER: Yes, it has. Why is that?</p>
-<p>CHILD: I don't know. Maybe it has to do with how much atmosphere there is.</p>
-<p>MOTHER: No, honey, there's always the same amount of atmosphere.</p>
-<p>CHILD: But it is more for the Sun now isn't it?</p>
-<p>MOTHER: No, dear. The atmosphere stays the same and the Sun moves.</p>
-<p>CHILD: No Mum that's not what I mean.</p>
-<p>MOTHER: So what do you mean?</p>
-<p>CHILD: I mean if you're the Sun and you're right up above us in the sky then the sunlight just has to come straight down to us, and it's just however much atmosphere there is. But if it's like now when the Sun is over there and its nearly touching the horizon then it has to come a long way through lots of atmosphere because it can't come straight down, it has to come over here and it has to come at an angle that comes through lots of atmosphere.</p>
-<p>MOTHER: Oh ... oh I see what you mean, yes. Yes honey, that does make sense. That sounds right.</p>
-<p>CHILD: And that's why it's green now.</p>
-<p>MOTHER: Yes, honey.</p>
-<p>CHILD: And not brown any more.</p>
-<p>MOTHER: Yes, honey.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum.</p>
-<p>MOTHER: Yes, honey?</p>
-<p>CHILD: Why did people used to say the sky is blue?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: Because I read on the Internet that there used to be sayings about how the sky was blue. Like you know sayings?</p>
-<p>MOTHER: Sayings?</p>
-<p>CHILD: Like when something bad happens and you say "cellar V".</p>
-<p>MOTHER: Oh, you mean "C'est la vie".</p>
-<p>CHILD: Seller vee?</p>
-<p>MOTHER: No, watch my mouth: C'est. La. Vie. Three words.</p>
-<p>CHILD: Those aren't words.</p>
-<p>MOTHER: They are, they're not English words though. It's another language.</p>
-<p>CHILD: What language?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: Oh. Do you know what it means?</p>
-<p>MOTHER: No, I don't think anyone speaks it any more.</p>
-<p>CHILD: Oh. So nobody knows?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p><em>~</em></p>
-<p>CHILD: I think it means "Everything's Great!" because sometimes you say things like that too.</p>
-<p>MOTHER: No, I don't think that's right.</p>
-<p>CHILD: Because sometimes a bad thing happens like you drop your sandwich on the floor and you say "fucking fantastic"...</p>
-<p>MOTHER: Language, dear.</p>
-<p>CHILD: Sorry mum. You say "fantastic" but it's not really fantastic it's quite bad, so it's sort of funny because that's the wrong thing to say.</p>
-<p>MOTHER: Yes, dear.</p>
-<p>CHILD: Yes, so I think seller vee means something like that, like "everything's great!" or "cool!" or something like that.</p>
-<p>MOTHER: Yes, dear.</p>
-<p><em>~</em></p>
-<p>CHILD: Oh yeah so you know how seller vee is a saying?</p>
-<p>MOTHER: Yes.</p>
-<p>CHILD: Yes so that's a saying for when something bad happens, but there are different sayings for other things.</p>
-<p>MOTHER: Mhm.</p>
-<p>CHILD: Like when I have a question but the question doesn't have an answer and you don't know what to answer then you can ask "How long is a piece of string?" and I don't know how long it is.</p>
-<p>MOTHER: Oh yes, but it's OK, you don't need to know how long it is...</p>
-<p>CHILD: No I know, I know that now that I don't need to know how long it is because it's just a saying.</p>
-<p>MOTHER: Yes, that's right. Because I know you worry when there's not an answer, but sometimes things don't have an answer.</p>
-<p>CHILD: No, it's OK, I read on the Internet about it and I know it's just a saying now. It's a thing you say when the question doesn't have an answer, it's like an example of a question without an answer so it's like you're saying these are the same kinds of question, this question and your question, and they don't have answers.</p>
-<p>MOTHER: Yes, dear, that's right.</p>
-<p>CHILD: I read it on the Internet because I was looking up how long a piece of string was and it said it doesn't have an answer, and the answer doesn't really matter and nobody knows anyway.</p>
-<p>MOTHER: Yes, honey.</p>
-<p>CHILD: And it had these other questions that didn't have answers and people can ask those too if you ask them a question but it doesn't have an answer.</p>
-<p>MOTHER: Yes.</p>
-<p>CHILD: Yes and one of them was "How many roads must a man walk down?".</p>
-<p>MOTHER: Oh yes, I have heard that.</p>
-<p>CHILD: Yes and one of them was "Does the poop shit in the woods?"</p>
-<p>MOTHER: Language.</p>
-<p>CHILD: Sorry Mum. It was "Does the poop poop in the woods?".</p>
-<p>MOTHER: Pope, dear.</p>
-<p>CHILD: Does the poop pope in the woods?</p>
-<p>MOTHER: No, dear, "Does the pope shit in the woods?".</p>
-<p>CHILD: Language, Mum.</p>
-<p>MOTHER: Sorry. It's "Does the pope poop in the woods?".</p>
-<p>CHILD: Oh OK. What's a pope?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: Oh. Does anyone know?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: So can you say "How long is a piece of string?" now?</p>
-<p>MOTHER: Maybe. I don't know if that makes sense. Maybe.</p>
-<p>CHILD. Oh.</p>
-<p><em>~</em></p>
-<p>CHILD: Mum?</p>
-<p>MOTHER: Yes?</p>
-<p>CHILD: How do you know it's pope and not poop?</p>
-<p>MOTHER: I don't know, honey.</p>
-<p>CHILD: Oh. So it might be poop then.</p>
-<p>MOTHER: No, dear, it's definitely pope.</p>
-<p>CHILD: Why?</p>
-<p>MOTHER: I don't know, I heard it somewhere, but it's definitely pope.</p>
-<p>CHILD: OK.</p>
-<p><em>~</em></p>
-<p>CHILD: And one of the questions was "Why is the sky blue?" and it confused me.</p>
-<p>MOTHER: Oh yes? Why?</p>
-<p>CHILD: Because we know a lot about the sky, just like we were just talking about, about how underneath it's just space really but it looks like it has a colour because of sunlight in the atmosphere makes it look like it's been coloured in.</p>
-<p>MOTHER: Yes, that's right.</p>
-<p>CHILD: Yes and so we sort of know the answer, so you shouldn't say it when someone asks a difficult question because you should say a question that doesn't have an answer, but this one does, and we know what it is.</p>
-<p>MOTHER: I see. Yes, I suppose you're right.</p>
-<p>CHILD: So why do you say it?</p>
-<p>MOTHER: Well let me think. I haven't heard that one, so it must be very old. Maybe they didn't know about the sky back then.</p>
-<p>CHILD: No, I think they did.</p>
-<p>MOTHER: I mean they might not have known how it worked.</p>
-<p>CHILD: No, I think they did.</p>
-<p>MOTHER: OK.</p>
-<p><em>~</em></p>
-<p>MOTHER: Are you worried about the blue?</p>
-<p>CHILD: The what?</p>
-<p>MOTHER: The blue - how they would say "Why is the sky blue?", when it isn't.</p>
-<p>CHILD: No, I know about that because it's like when you say "clear as mud" when things are clear even though mud isn't clear, and how you say "fucking fantastic"...</p>
-<p>MOTHER: Language.</p>
-<p>CHILD: Sorry ... how you say "fantastic" when things are bad even though fantastic means good. It's sort of a joke.</p>
-<p>MOTHER: Ah yes, ok. I suppose that makes sense. Because I was thinking that maybe the sky used to be blue, but your explanation makes more sense.</p>
-<p>CHILD: Yes.</p>
-<p>MOTHER: You're very clever.</p>
-<p>CHILD: Yes, but so are you Mum.</p>
-<p>MOTHER: I don't know, honey.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="/blog/i_dont_know_honey.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
