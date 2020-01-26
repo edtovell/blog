@@ -71,7 +71,7 @@ So the best thing to do would be to name your servers after a common, sentiment-
 Allow me to make the case thusly:
 
  * Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
- * The binary is neutral in terms of seniority * neither girls or boys are better or more important, so either one could be in charge at a given time.
+ * The binary is neutral in terms of seniority - neither girls or boys are better or more important, so either one could be in charge at a given time.
  * They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
  * The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.
  * Pink and blue are (along with white) the colours of the [Transgender Pride flag](https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg), which hopefully should spark a productive conversation about inclusivity in your workplace.
