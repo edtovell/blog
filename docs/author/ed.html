@@ -35,7 +35,7 @@
 
 </footer><!-- /.post-info --><h1>What is A/B Deployment?</h1>
 <p><strong><em>Obviously skip this bit if you know what it is, it gets more interesting afterwards</em></strong></p>
-<p>It's a low-risk way of updating your web app when you need to maintain uptime. The technique is explained in the movie <em>Fight Club</em>.</p>
+<p>It's a low-risk way of updating your web app when you need to maintain uptime. The technique is explained in the movie <em>Fight Club</em> (<a href="https://youtu.be/wS_pYyWp6I8?t=41">video NSFW</a>).</p>
 <p>Before cinemas went digital, projectors came in pairs. The film would come on several reels, so you need to do some manoeuvring to get a movie to play straight through with no interruption. You set up your first projector with the first reel and press play, and you rig up the other projector with the second reel. Just before the first reel comes to an end, you press play on the second projector and switch them. The audience sees one continuous movie, but it's being projected from the second machine now. Now you can take the first reel down and wind it back and put it away, then set up your first projector with the <em>third</em> reel and do the whole thing again. And again and again until the film ends.</p>
 <p>You can pull the same trick with web services. Once you've built an app and put it on a running server and people are using it, you might not be able risk any downtime. So instead of restarting the server every time you need to deploy changes to your code, you can use a second server and pull the old switcheroo. With two servers, you can keep your service live and ready on server A, while you deploy and restart and test and whatnot on server B. When you're sure it's ready, you swap the DNS CNAMEs and everybody's using the updated service, none the wiser.</p>
 <h1>So what's the problem?</h1>
@@ -64,22 +64,28 @@
 <p>However, the Red/Black naming convention does provide a clue to an <em>actual</em> solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is <em>better</em> or <em>worth more</em> (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it * if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing.</p>
 <p>So the best thing to do would be to name your servers after a common, sentiment-neutral pairing that is unlikely to be confused with some other naming convention, and doesn't imply anything about the seniority or status of the instances. So I suggest we all</p>
 <h1>CALL YOUR SERVERS "PINK" AND "BLUE"</h1>
-<p>Allow me to make the case thusly:
- * Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
- * The binary is neutral in terms of seniority * neither girls or boys are better or more important, so either one could be in charge at a given time.
- * They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
- * The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.
- * Pink and blue are (along with white) the colours of the <a href="https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg">Transgender Pride flag</a>, which hopefully should spark a productive conversation about inclusivity in your workplace.
- * As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the <em>actually</em> live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.</p>
-<p>The only downsides I can think of are:
- * Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles
- * This is entirely too hard to be thinking about such a mild problem</p>
+<p>Allow me to make the case thusly:</p>
+<ul>
+<li>Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.</li>
+<li>The binary is neutral in terms of seniority * neither girls or boys are better or more important, so either one could be in charge at a given time.</li>
+<li>They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).</li>
+<li>The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.</li>
+<li>Pink and blue are (along with white) the colours of the <a href="https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg">Transgender Pride flag</a>, which hopefully should spark a productive conversation about inclusivity in your workplace.</li>
+<li>As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the <em>actually</em> live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.</li>
+</ul>
+<p>The only downsides I can think of are:</p>
+<ul>
+<li>Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles</li>
+<li>This is entirely too hard to be thinking about such a mild problem</li>
+</ul>
 <p>See, it's a practically flawless system!</p>
-<p>Other acceptable naming conventions for the Pink/Blue Deployment (hey, it's catching on!) include:
- * Square/Circle
- * Laurel/Hardy
- * Jessie/James
- * Wilbur/Orville (because nobody remembers which one did the flying anyway)</p>
+<p>Other acceptable naming conventions for the Pink/Blue Deployment (hey, it's catching on!) include:</p>
+<ul>
+<li>Square/Circle</li>
+<li>Laurel/Hardy</li>
+<li>Jessie/James</li>
+<li>Wilbur/Orville (because nobody remembers which one did the flying anyway)</li>
+</ul>
 <p>Suggestions welcome!</p>                </article>
             </aside><!-- /#featured -->
                 <section id="content" class="body">

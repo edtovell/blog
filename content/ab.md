@@ -10,7 +10,7 @@ Summary:
 
 ***Obviously skip this bit if you know what it is, it gets more interesting afterwards***
 
-It's a low-risk way of updating your web app when you need to maintain uptime. The technique is explained in the movie *Fight Club*.
+It's a low-risk way of updating your web app when you need to maintain uptime. The technique is explained in the movie *Fight Club* ([video NSFW](https://youtu.be/wS_pYyWp6I8?t=41)).
 
 Before cinemas went digital, projectors came in pairs. The film would come on several reels, so you need to do some manoeuvring to get a movie to play straight through with no interruption. You set up your first projector with the first reel and press play, and you rig up the other projector with the second reel. Just before the first reel comes to an end, you press play on the second projector and switch them. The audience sees one continuous movie, but it's being projected from the second machine now. Now you can take the first reel down and wind it back and put it away, then set up your first projector with the _third_ reel and do the whole thing again. And again and again until the film ends.
 
@@ -69,6 +69,7 @@ So the best thing to do would be to name your servers after a common, sentiment-
 # CALL YOUR SERVERS "PINK" AND "BLUE"
 
 Allow me to make the case thusly:
+
  * Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
  * The binary is neutral in terms of seniority * neither girls or boys are better or more important, so either one could be in charge at a given time.
  * They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
@@ -77,12 +78,14 @@ Allow me to make the case thusly:
  * As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the *actually* live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.
 
  The only downsides I can think of are:
+
  * Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles
  * This is entirely too hard to be thinking about such a mild problem
 
 See, it's a practically flawless system!
 
 Other acceptable naming conventions for the Pink/Blue Deployment (hey, it's catching on!) include:
+
  * Square/Circle
  * Laurel/Hardy
  * Jessie/James
