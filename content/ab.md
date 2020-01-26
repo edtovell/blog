@@ -62,31 +62,31 @@ Luckily, there is a solution. You may also have heard that the A/B or Green/Blue
 
 "RED" is no better a name than "GREEN" for precisely the same reason.
 
-However, the Red/Black naming convention does provide a clue to an *actual* solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is *better* or *worth more* (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it - if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing.
+However, the Red/Black naming convention does provide a clue to an *actual* solution here. It's only unhelpful because "red" and "black" imply a good/bad binarity (think "in the ..."), which will lead to wrong conclusions half the time. But whoever came up with it was probably thinking about a deck of cards. Half the cards are red and half are black, and neither is *better* or *worth more* (in most games at least). It's an entirely neutral pairing, and a common enough cultural reference point that you can expect your whole team to understand it * if it weren't overshadowed by the seperate and unrelated "black=good/red=bad" thing.
 
 So the best thing to do would be to name your servers after a common, sentiment-neutral pairing that is unlikely to be confused with some other naming convention, and doesn't imply anything about the seniority or status of the instances. So I suggest we all
 
 # CALL YOUR SERVERS "PINK" AND "BLUE"
 
 Allow me to make the case thusly:
- - Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
- - The binary is neutral in terms of seniority - neither girls or boys are better or more important, so either one could be in charge at a given time.
- - They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
- - The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.
- - Pink and blue are (along with white) the colours of the [Transgender Pride flag](https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg), which hopefully should spark a productive conversation about inclusivity in your workplace.
- - As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the *actually* live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.
+ * Pink and blue are the colours that are traditionally assigned to girls and boys, which is a common two-way distinction.
+ * The binary is neutral in terms of seniority * neither girls or boys are better or more important, so either one could be in charge at a given time.
+ * They aren't conventionally associated with health (barring the little-used phrase "in the pink", which makes no sense in this context if you consider that the hypothetical counterpart "in the blue" means nothing).
+ * The words "pink" and "blue" each contain the same number of letters, which is mildly aesthetically pleasing.
+ * Pink and blue are (along with white) the colours of the [Transgender Pride flag](https://en.wikipedia.org/wiki/Transgender_flags#/media/File:Transgender_Pride_flag.svg), which hopefully should spark a productive conversation about inclusivity in your workplace.
+ * As for any developer who subconsciously assumes that boys are better, and who concludes therefore that the Blue server is the live one, and who deploys new code to the *actually* live Pink server, and who accidentally causes a small amount of downtime and rolls back the service to an old version; they deserve to learn the lesson that they would undoubtedly be taught in that situation.
 
  The only downsides I can think of are:
- - Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles
- - This is entirely too hard to be thinking about such a mild problem
+ * Gender is a spectrum and this naming convention directly reinforces harmful assumptions about socially assigned gender roles
+ * This is entirely too hard to be thinking about such a mild problem
 
 See, it's a practically flawless system!
 
 Other acceptable naming conventions for the Pink/Blue Deployment (hey, it's catching on!) include:
- - Square/Circle
- - Laurel/Hardy
- - Jessie/James
- - Wilbur/Orville (because nobody remembers which one did the flying anyway)
+ * Square/Circle
+ * Laurel/Hardy
+ * Jessie/James
+ * Wilbur/Orville (because nobody remembers which one did the flying anyway)
  
  Suggestions welcome!
 
