@@ -5,6 +5,7 @@ from __future__ import unicode_literals
 AUTHOR = 'Ed'
 SITENAME = "Ed's Blog"
 SITEURL = ''
+RELATIVE_URLS = True
 
 PATH = 'content'
 OUTPUT_PATH = 'docs'

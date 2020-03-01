@@ -3,22 +3,22 @@
 <head>
         <meta charset="utf-8" />
         <title>Ed's Blog - dev stuff</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link rel="stylesheet" href="../theme/css/main.css" />
 </head>
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="/">Ed's Blog</a></h1>
+                <h1><a href="../">Ed's Blog</a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/category/dev-stuff.html">dev stuff</a></li>
-                    <li><a href="/category/misc.html">misc</a></li>
-                    <li><a href="/category/short-stories.html">short stories</a></li>
+                    <li class="active"><a href="../category/dev-stuff.html">dev stuff</a></li>
+                    <li><a href="../category/misc.html">misc</a></li>
+                    <li><a href="../category/short-stories.html">short stories</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="/ab_naming.html">A Sensible Naming Convention for A/B Deployment</a></h1>
+                    <h1 class="entry-title"><a href="../ab_naming.html">A Sensible Naming Convention for A/B Deployment</a></h1>
 <footer class="post-info">
         <abbr class="published" title="2020-01-26T00:00:00+00:00">
                 Published: Sun 26 January 2020
@@ -29,9 +29,9 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/author/ed.html">Ed</a>
+                By                         <a class="url fn" href="../author/ed.html">Ed</a>
         </address>
-<p>In <a href="/category/dev-stuff.html">dev stuff</a>.</p>
+<p>In <a href="../category/dev-stuff.html">dev stuff</a>.</p>
 
 </footer><!-- /.post-info --><h1>What is A/B Deployment?</h1>
 <p><strong><em>Obviously skip this bit if you know what it is, it gets more interesting afterwards</em></strong></p>
@@ -54,11 +54,11 @@
 <h1>DON'T CALL YOUR SERVERS "GREEN" AND "BLUE"</h1>
 <p>Colours don't normally come "in order" like letters or numbers or superheroes, but they do have unhelpful connotations that confuse things. The colour green, for example, is generally associated with "good" or "health" or "go" or "safe", that sort of thing, which is ironic in this case because it's a problem.</p>
 <p>I use AWS a lot (obviously because I love Bezos and I don't think he has enough money), and this is what the Elastic Beanstalk dashboard looks like from a search I did:</p>
-<p><img alt="The servers, they are both green" src="/images/eb-dash.png"></p>
+<p><img alt="The servers, they are both green" src="../images/eb-dash.png"></p>
 <p>Leaving aside that this person has called their servers "primary" and "secondary" (grr), the dashboard is helpfully telling us that both servers are healthy by colour-coding them as green. When they start getting overloaded they turn yellow, and if they fail they turn red. Handy, good, useful, etc...</p>
 <p>UNTIL you come to deployment time, and let's say you followed convention and called your servers "GREEN" and "BLUE". If you're tired or drunk or new (or <em>green??</em>) or out of sorts for whatever reason, you might look at the dashboard and conclude that "GREEN" is the live one. And 50% of the time, that conclusion is wrong.</p>
 <p>Even if you're the kind of person who knows the difference between names for colours and actual colours, and who prefers skimming command line text output to relying on web interfaces, Elastic Beanstalk provides a helpful command line tool that includes a status monitor, which outputs something like this (again, I found it from a quick search):</p>
-<p><img alt="&quot;Health: Green&quot;" src="/images/eb-status.png"></p>
+<p><img alt="&quot;Health: Green&quot;" src="../images/eb-status.png"></p>
 <p>And even though it clearly only says "Green" under "Health" and not "Application Name" or "Environment ID" or any other heading, <em>the fact that is says "Green" at all</em> is probably enough to mislead somebody just skimming for keywords.</p>
 <p>Luckily, there is a solution. You may also have heard that the A/B or Green/Blue Deployment pattern is also commonly known as <strong>Red/Black Deployment</strong>, which ...</p>
 <h1>DON'T CALL YOUR SERVERS "RED" AND "BLACK"</h1>
