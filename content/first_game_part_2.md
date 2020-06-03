@@ -22,7 +22,8 @@ In the end I set a strict end-of-day deadline for myself, finished up, and close
 # Javascript is a bananas hot mess
 I come from python, which is a good language to pick up and run with and is generally awesome. But under the hood it's - and I don't normally like using terms like this because of mental health stigma and whatnot, but I can't think of a better way of putting it - absolutely batshit bonkers. It is full of weird vestigial features and band-aids over broken bits. For just one example, the very existence of the [integer cache](https://wsvincent.com/python-wat-integer-cache/) perplexes me profoundly.
 
-So Javascript then. It's a right barrel of laughs, it is. 
+So Javascript then. It's a right barrel of laughs, it is.
+
  - Everything is a function, to an overwhelming degree. I feel like a core language developer must have smoked some stuff and then got overexcited and fanatical about passing functions as arguments to other functions, because it's everywhere. It feels shoehorned in. A stack overflow post told me to prefer `.forEach` over a for-loop when iterating through arrays - why? For-loops are readable and sense-making to humans. Not everything has to be a function.
  - I suppose as a sort of corollary of the previous, there are about a billion different ways to declare functions. I do quite like the `()=>{}` thing, but is it really necessary?
  - Tracing bugs is a damn chore. I'm not sure how much of this is JS and how much is the Phaser framework, but it's bloody annoying either way. Every level of anonymous-function-as-argument and callback within callback seems to totally obfuscate the stack trace to the point where you might as well just get "Error: It Broke".
@@ -33,6 +34,7 @@ So Javascript then. It's a right barrel of laughs, it is.
 
 # The simplest things are way more complicated than you would expect
 The hardest bits of the whole process were:
+
  - getting the guy to move fixed to a grid (like Pokemon) instead of floating freely in whichever direction (like Zelda).
  - reading a keyboard tap as one event, instead of seeing the key in the down position at the start of each frame and reading it as a new event, meaning you immediately skip and then exit dialogue every time you enter it. I've since found out that there is a built-in way of doing this, but I never found it because I came via the "hold left to go left" sphere of influence.
  - Everything to do with displaying text. I naively thought I wouldn't need to treat the menus as full-blown state machines, I would just sort of wing it, and like almost every other time I made that assumption I came to regret it down the line. It's such a simple part of every game that I totally overlooked how complex it would get. Meet NPC, press button, read dialog text, choose response, press button to skip ahead, etc. And as soon as I tried to formalise a structure with some good old family-style JSON, I made it so that every interaction had to follow the same highly restrictive format (text, followed by a response menu, followed by text). In future I'll probably just use an existing plugin for this kind of thing.
