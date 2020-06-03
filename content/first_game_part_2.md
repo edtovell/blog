@@ -6,6 +6,8 @@ Slug: first_game_2
 Authors: Ed
 Summary:
 
+__WHOOPS__ I wrote this in like April and forgot to upload it.
+
 You know what, there's nothing like a killer virus to free up some spare time.
 
 Here are some things I think I learned now that I finally "finished" the game.
