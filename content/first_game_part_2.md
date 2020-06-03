@@ -1,12 +1,12 @@
 Title: More Things I Learned While Trying to Learn Game Development
-Date: 2020-April-19
+Date: 2020-June-3
 Modified: 2020-June-3
 Category: dev-stuff
 Slug: first_game_2
 Authors: Ed
 Summary:
 
-__WHOOPS__ I wrote this in like April and forgot to upload it.
+> __WHOOPS__ I wrote this in like April and forgot to upload it.
 
 You know what, there's nothing like a killer virus to free up some spare time.
 
