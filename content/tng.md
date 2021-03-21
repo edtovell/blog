@@ -1,0 +1,30 @@
+Title: Mildly Problematic Star Trek Utopia
+Date: 2020-Dec-04
+Modified: 2021-Mar-21
+Category: misc
+Tags:
+Slug: tng
+Authors: Ed
+Summary:
+
+<h4>tw: discussion of sexual assault</h4>
+
+So I've been watching a lot of <i>The Next Generation</i> lately. I've never been interested enough in <i>Star Trek</i> to actually seek it out until now, and I only did it this time because of fairly unique circumstances, but oooh myyy it's very good! Hot take, I know.
+
+I'm about a season and a half in now and there's so much to chew on - dramatic choices, philosophy, high-concept sci-fi, three decade old special effects, questionable wardrobe choices - it's just absolutely delightful on so many levels. But the theme that keeps coming back to me is how the quintessential Roddenberry idea of a peaceful space-age utopian future has changed over the years. The original <i>Star Trek</i> portrayed its idealistic vision with almost a countercultural spirit, as though this life could be possible if only we would stop with the nuclear arms race and civil inequality. But around when <i>TNG</i> first aired the Berlin Wall came down, Reagan and Thatcher left office, and Western economies boomed. There was good reason for many to start feeling optimistic about the future of human societies - this is the time when Fukuyama declared the "End of History". As such the positivity of the Roddenberry idealism was imbued with a uniquely "so now what?" Gen X flavour.
+
+And as inspiring as it is to see kind, intelligent characters demonstrate constant humility and tolerance through testing situations, it's not necessarily timeless. I come away from most episodes feeling 95% proud of belonging to a species capable of such curiosity and humour and love and fallibility, and 5% gobsmacked at how some of the creators' incongruous socio-political choices got past the first draft. What I mean is: for a luxury sci-fi utopia there sure are a lot of 1990s-smelling systemic problems yet to iron out.
+
+- Nepotism - I know that Wesley Crusher is supposedly brilliant and prodigous, but there must be millions of kids like him. He may well merit his promotion and seat on the bridge, but it's not his competence that gets him a foot in the turbolift door - he gets there because he's the medical officer's son. No other kids had that advantage.
+
+- Affirmative action - Worf is the only Klingon Starfleet officer, and Data is the only known android there even is (at the series premier), and while it is made abundantly clear in both cases that they excelled in training and graduated the academy with great distinction, it still smells a little ... off. It's a bit of a coincidence, don't you think, that these two particular individuals are both deployed on the same vessel - the brand new fleet flagship, no less? Is Starfleet showcasing them? "Hey, see how hip and woke we are with the minorities" kind of thing. Not that it's bad at all that they are actively putting their ideals into practice, it just feels stained by the impression that these assignments are possibly motivated more by PR optics than by personal merit.
+
+- Women's reproductive rights - The top contender for the Scene That Most Wouldn't Get Made Today Award is the staff meeting to discuss Troi's pregnancy. On the one hand, we could charitably concede that an attack on a senior officer probably warrants a meeting to handle the security implications. Who is the perpetrator, and how did they get aboard? Are others in danger? It's also a serendipitous scientific discovery, which is worth thinking about. But surely - <i>surely</i> - the first priority is "Holy shit are you ok?" Maybe some counselling? Any kind of sensitivity to a likely traumatic situation? No, instead we get Troi staying understandably mute while the men discuss what is to be done with the foetus - to treat it as a worthy life form, or as a security threat. Riker throws some shade on Troi by questioning its parentage, and then they argue about what they should do with the body parts of this actual rape victim who is still currently in the room and whom they are also ignoring. Credit to them I guess for shutting up and ending the meeting when she does finally say her piece, but couldn't we have started with that?
+
+- The Irish - Oh boy, <i>that</i> episode, yeah that was wild. Not sure what they were thinking there.
+
+- The Weird Lookin' - The sheer number of times that the Enterprise happens upon some new or unexpected aliens, and some crew
+member or other must find the soonest available moment to say "whoa, these guys are frickin uggos, mate check out these absolute munters, they're weird as fuck". And some clever non-prejudiced officer must chide them, remind them how strange humans must seem to the newcomers, and recall for them how much of the human species' success has been contingent on its suppression of such prejudice. All very good and instructive for the viewer. But after the fortieth time you start to wonder what kind of futuristic utopian space explorers these guys are who keep blurting out how freaking gross everything is, and wouldn't it be great if space was just full of white dudes like they'd expected. Wouldn't it be more in-universe realistic if they just didn't mention people's appearances at all? There reaches a point when all the demonstrative condemnation starts to undermine itself.
+
+I wrote this on-and-off over the course of several months and my opinion hasn't really changed much. In fact I keep seeing new bits and pieces that seem to acknowledge the problem - a Netflix trailer for DS9, for example, admonishes one of the characters for pre-judging the Ferengi bartender. It does make me wonder what blind spots we're currently suffering, and what the reboot movies or <i>Discovery</i> will look like in retrospect 30 years from now.
+
