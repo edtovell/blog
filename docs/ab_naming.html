@@ -8,7 +8,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="./">Ed's Blog </a></h1>
+                <h1><a href="./">Ed's Blog</a></h1>
                 <nav><ul>
                     <li class="active"><a href="./category/dev-stuff.html">dev-stuff</a></li>
                     <li><a href="./category/fiction.html">fiction</a></li>
@@ -50,7 +50,7 @@
 <h1>DON'T CALL YOUR SERVERS "A" and "B"</h1>
 <p>If you're new to the code base because you just started a new job or joined a project, or if you had a rough night last night and you're a bit hungover, or for any silly human reason you aren't 100% on board with what's going on, your brain might look at this setup and go</p>
 <blockquote>
-<p><em>"<strong>A</strong> is the main one, so I can deploy to <strong>B</strong> and swap them..."</em></p>
+<p><em>"</em><em>A</em><em> is the main one, so I can deploy to </em><em>B</em><em> and swap them..."</em></p>
 </blockquote>
 <p>... which 50% of the time will RUIN EVERYTHING. If Server B is live, then you just took down a live server to deploy code to it, then rolled back your service to whatever was running on Server A. "A" and "B" are names from a well-known series called the Latin Alphabet, where "A" is the <em>first</em> letter and "B" is the <em>second</em>. So everyone assumes that "A" is the <strong>main one</strong>.</p>
 <p>To make things worse, I once inherited a stack where the servers were called "A" and "B", but also the CNAMEs were called <code>...service/api/whatever...</code> and <code>...service-b/api/whatever...</code>, so half the time "B" would be live while "A" is serving <strong>service-b</strong>. It takes a little bit of brainwork to figure out what's happening, and if you have to think about it then you can make mistakes.</p>

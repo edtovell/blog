@@ -8,7 +8,7 @@
 
 <body id="index" class="home">
         <header id="banner" class="body">
-                <h1><a href="../">Ed's Blog </a></h1>
+                <h1><a href="../">Ed's Blog</a></h1>
                 <nav><ul>
                     <li><a href="../category/dev-stuff.html">dev-stuff</a></li>
                     <li><a href="../category/fiction.html">fiction</a></li>
@@ -18,7 +18,90 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="../tng.html">Mildly Problematic Star Trek Utopia</a></h1>
+                    <h1 class="entry-title"><a href="../walrus.html">Walrus Abuse</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2021-06-24T00:00:00+00:00">
+                Published: Thu 24 June 2021
+        </abbr>
+		<br />
+        <abbr class="modified" title="2021-06-24T00:00:00+00:00">
+                Updated: Thu 24 June 2021
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="../author/ed.html">Ed</a>
+        </address>
+<p>In <a href="../category/dev-stuff.html">dev-stuff</a>.</p>
+
+</footer><!-- /.post-info --><p>At work I've been upgrading a lot of my python projects to 3.8 for a good few months now, and I've taken the opportunity to wantonly overuse the new-as-of-3.8 walrus operator. Now that it's been long enough for me to have cause to go and <em>again</em> revisit those scripts, I can confidently say this: the walrus feels <em>so good</em> to write, and it feels <em>so bad</em> to read.</p>
+<p>Just look at this bastard</p>
+<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="o">=</span>
+</code></pre></div>
+
+
+<p>The whole entire point of the thing - as I understand it, at least - is to reduce repetition in your list comprehensions. I didn't really mean to do yet another tutorial here, I was just trying to get my thoughts in order and it kinda turned into it, but I guess it also counts as background for making my point.</p>
+<p>List comprehensions are themselves a nice way of building lists without having to think very hard about loops. Let's say you've got a bunch of these <code>Animal</code> objects:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="n">Dog</span><span class="p">,</span> <span class="n">Cat</span><span class="p">,</span> <span class="n">Walrus</span><span class="p">,</span> <span class="n">Parakeet</span><span class="p">,</span> <span class="n">Esquilax</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>Let's say - just like in every OOP tutorial - you want to get the noise each animal makes, in a list. Without list comprehension syntax you might write this loop:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">noises</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">:</span>
+<span class="o">&gt;&gt;&gt;</span>    <span class="n">noises</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">noise</span><span class="p">)</span>
+</code></pre></div>
+
+
+<p>This will give you the correct answer, <code>["woof", "meow", "arf", "caw", "reeee"]</code>, but wouldn't it be nicer to just do</p>
+<div class="highlight"><pre><span></span><code><span class="n">noises</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">noise</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>Yep yep yep yep yep, good good good. List comprehension syntax also lets you do this cool filtering trick where you can add a condition, and it reads almost just like a sentence of English, which is super nifty:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">is_a_mammal</span><span class="p">()</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">]</span>
+<span class="p">[</span><span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="n">NaN</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">a</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="n">a</span><span class="o">.</span><span class="n">is_a_mammal</span><span class="p">()]</span>
+<span class="p">[</span><span class="n">Dog</span><span class="p">,</span> <span class="n">Cat</span><span class="p">,</span> <span class="n">Walrus</span><span class="p">,</span> <span class="n">Esquilax</span><span class="p">]</span>
+</code></pre></div>
+
+
+<p>I'm sure there's a good reason why <code>NaN</code> evaluates <code>True</code> but I don't know what it is, I don't like it, and I don't trust it.</p>
+<p>ANYWAY AS I WAS SAYING BEFORE the entire justification for this walrus thingy - again, as far as I can tell, at least - is to ease the situation where you're cramming way too much logic into one line already and ending up repeating yourself. Wouldn't this</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span>
+<span class="p">[(</span><span class="n">Dog</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="p">(</span><span class="n">Walrus</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">Esquilax</span><span class="p">,</span> <span class="n">NaN</span><span class="p">)]</span>
+</code></pre></div>
+
+
+<p>be so much more readable as this:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">quota</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="p">(</span><span class="n">quota</span><span class="p">:</span><span class="o">=</span><span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
+<span class="p">[(</span><span class="n">Dog</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="p">(</span><span class="n">Walrus</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">Esquilax</span><span class="p">,</span> <span class="n">NaN</span><span class="p">)]</span>
+</code></pre></div>
+
+
+<p>More readable, right? Right? Eh, sorta, at least? And I think it only executes the repeated part once instead of twice too, which is nice I guess...? I think?</p>
+<p>Maybe this is just me but I love list comprehensions beyond what is reasonable, so I've been abusing the walrus to fuck. And the resulting code is just not legible. I am unwilling to show it to you for business secrets and embarassment reasons, but honestly just picture spaghetti with tangled earbuds in it.</p>
+<p>I saw this Fibonacci implementation in a tweet when walrus was first released and it took me honestly like 15 to 20 minutes of staring right at it before I knew what was happening. And honestly I'm not sure if 15 to 20 minutes is like above average or what</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span><span class="p">:</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+</code></pre></div>
+
+
+<p>(I found it again on <a href=https://news.ycombinator.com/item?id=21862671>Hacker News</a>)</p>
+<p>The other peeve I have about this thing is that every time I think about it I get <em>I Am The Walrus</em> in my head and it's a cracking tune but ... it's a lot, you know? Custard dripping from a dead dog's eye? Too much to be dealing with when I'm struggling to concentrate on these TPS reports as it is.</p>
+<p>Damn.</p>
+<p>Like, I'm not saying we shouldn't have it, but just do it in moderation. Not too many walri, please.</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="../tng.html" rel="bookmark"
+                           title="Permalink to Mildly Problematic Star Trek Utopia">Mildly Problematic Star Trek Utopia</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2020-12-04T00:00:00+00:00">
                 Published: Fri 04 December 2020
@@ -33,35 +116,10 @@
         </address>
 <p>In <a href="../category/misc.html">misc</a>.</p>
 
-</footer><!-- /.post-info --><h4>tw: discussion of sexual assault</h4>
-
-<p>So I've been watching a lot of <i>The Next Generation</i> lately. I've never been interested enough in <i>Star Trek</i> to actually seek it out until now, and I only did it this time because of fairly unique circumstances, but oooh myyy it's very good! Hot take, I know.</p>
-<p>I'm about a season and a half in now and there's so much to chew on - dramatic choices, philosophy, high-concept sci-fi, three decade old special effects, questionable wardrobe choices - it's just absolutely delightful on so many levels. But the theme that keeps coming back to me is how the quintessential Roddenberry idea of a peaceful space-age utopian future has changed over the years. The original <i>Star Trek</i> portrayed its idealistic vision with almost a countercultural spirit, as though this life could be possible if only we would stop with the nuclear arms race and civil inequality. But around when <i>TNG</i> first aired the Berlin Wall came down, Reagan and Thatcher left office, and Western economies boomed. There was good reason for many to start feeling optimistic about the future of human societies - this is the time when Fukuyama declared the "End of History". As such the positivity of the Roddenberry idealism was imbued with a uniquely "so now what?" Gen X flavour.</p>
-<p>And as inspiring as it is to see kind, intelligent characters demonstrate constant humility and tolerance through testing situations, it's not necessarily timeless. I come away from most episodes feeling 95% proud of belonging to a species capable of such curiosity and humour and love and fallibility, and 5% gobsmacked at how some of the creators' incongruous socio-political choices got past the first draft. What I mean is: for a luxury sci-fi utopia there sure are a lot of 1990s-smelling systemic problems yet to iron out.</p>
-<ul>
-<li>
-<p>Nepotism - I know that Wesley Crusher is supposedly brilliant and prodigous, but there must be millions of kids like him. He may well merit his promotion and seat on the bridge, but it's not his competence that gets him a foot in the turbolift door - he gets there because he's the medical officer's son. No other kids had that advantage.</p>
-</li>
-<li>
-<p>Affirmative action - Worf is the only Klingon Starfleet officer, and Data is the only known android there even is (at the series premier), and while it is made abundantly clear in both cases that they excelled in training and graduated the academy with great distinction, it still smells a little ... off. It's a bit of a coincidence, don't you think, that these two particular individuals are both deployed on the same vessel - the brand new fleet flagship, no less? Is Starfleet showcasing them? "Hey, see how hip and woke we are with the minorities" kind of thing. Not that it's bad at all that they are actively putting their ideals into practice, it just feels stained by the impression that these assignments are possibly motivated more by PR optics than by personal merit.</p>
-</li>
-<li>
-<p>Women's reproductive rights - The top contender for the Scene That Most Wouldn't Get Made Today Award is the staff meeting to discuss Troi's pregnancy. On the one hand, we could charitably concede that an attack on a senior officer probably warrants a meeting to handle the security implications. Who is the perpetrator, and how did they get aboard? Are others in danger? It's also a serendipitous scientific discovery, which is worth thinking about. But surely - <i>surely</i> - the first priority is "Holy shit are you ok?" Maybe some counselling? Any kind of sensitivity to a likely traumatic situation? No, instead we get Troi staying understandably mute while the men discuss what is to be done with the foetus - to treat it as a worthy life form, or as a security threat. Riker throws some shade on Troi by questioning its parentage, and then they argue about what they should do with the body parts of this actual rape victim who is still currently in the room and whom they are also ignoring. Credit to them I guess for shutting up and ending the meeting when she does finally say her piece, but couldn't we have started with that?</p>
-</li>
-<li>
-<p>The Irish - Oh boy, <i>that</i> episode, yeah that was wild. Not sure what they were thinking there.</p>
-</li>
-<li>
-<p>The Weird Lookin' - The sheer number of times that the Enterprise happens upon some new or unexpected aliens, and some crew
-member or other must find the soonest available moment to say "whoa, these guys are frickin uggos, mate check out these absolute munters, they're weird as fuck". And some clever non-prejudiced officer must chide them, remind them how strange humans must seem to the newcomers, and recall for them how much of the human species' success has been contingent on its suppression of such prejudice. All very good and instructive for the viewer. But after the fortieth time you start to wonder what kind of futuristic utopian space explorers these guys are who keep blurting out how freaking gross everything is, and wouldn't it be great if space was just full of white dudes like they'd expected. Wouldn't it be more in-universe realistic if they just didn't mention people's appearances at all? There reaches a point when all the demonstrative condemnation starts to undermine itself.</p>
-</li>
-</ul>
-<p>I wrote this on-and-off over the course of several months and my opinion hasn't really changed much. In fact I keep seeing new bits and pieces that seem to acknowledge the problem - a Netflix trailer for DS9, for example, admonishes one of the characters for pre-judging the Ferengi bartender. It does make me wonder what blind spots we're currently suffering, and what the reboot movies or <i>Discovery</i> will look like in retrospect 30 years from now.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+</footer><!-- /.post-info -->                
+                <a class="readmore" href="../tng.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
