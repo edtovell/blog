@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Walrus Abuse</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-</head>
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>Walrus Abuse</title>
+                        <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="./">Ed's Blog</a></h1>
-                <nav><ul>
-                    <li class="active"><a href="./category/dev-stuff.html">dev-stuff</a></li>
-                    <li><a href="./category/fiction.html">fiction</a></li>
-                    <li><a href="./category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./walrus.html" rel="bookmark"
-           title="Permalink to Walrus Abuse">Walrus Abuse</a></h1>
-    </header>
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Ed's Blog</a></h1>
+                        <nav><ul>
+                                                <li class="active"><a href="./category/dev-stuff.html">dev-stuff</a></li>
+                                                <li><a href="./category/fiction.html">fiction</a></li>
+                                                <li><a href="./category/misc.html">misc</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="./walrus.html" rel="bookmark"
+             title="Permalink to Walrus Abuse">Walrus Abuse</a></h1>
+      </header>
 
-    <div class="entry-content">
+      <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2021-06-24T00:00:00+00:00">
                 Published: Thu 24 June 2021
         </abbr>
-		<br />
-        <abbr class="modified" title="2021-06-24T00:00:00+00:00">
-                Updated: Thu 24 June 2021
-        </abbr>
+                <br />
+                <abbr class="modified" title="2021-06-24T00:00:00+00:00">
+                        Updated: Thu 24 June 2021
+                </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/ed.html">Ed</a>
-        </address>
-<p>In <a href="./category/dev-stuff.html">dev-stuff</a>.</p>
-
-</footer><!-- /.post-info -->      <p>At work I've been upgrading a lot of my python projects to 3.8 for a good few months now, and I've taken the opportunity to wantonly overuse the new-as-of-3.8 walrus operator. Now that it's been long enough for me to have cause to go and <em>again</em> revisit those scripts, I can confidently say this: the walrus feels <em>so good</em> to write, and it feels <em>so bad</em> to read.</p>
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="./author/ed.html">Ed</a>
+                </address>
+        <p>In <a href="./category/dev-stuff.html">dev-stuff</a>.</p>
+        
+</footer><!-- /.post-info -->        <p>At work I've been upgrading a lot of my python projects to 3.8 for a good few months now, and I've taken the opportunity to wantonly overuse the new-as-of-3.8 walrus operator. Now that it's been long enough for me to have cause to go and <em>again</em> revisit those scripts, I can confidently say this: the walrus feels <em>so good</em> to write, and it feels <em>so bad</em> to read.</p>
 <p>Just look at this bastard</p>
-<div class="highlight"><pre><span></span><code><span class="p">:</span><span class="o">=</span>
+<div class="highlight"><pre><span></span><code><span class="o">:=</span>
 </code></pre></div>
-
 
 <p>The whole entire point of the thing - as I understand it, at least - is to reduce repetition in your list comprehensions. I didn't really mean to do yet another tutorial here, I was just trying to get my thoughts in order and it kinda turned into it, but I guess it also counts as background for making my point.</p>
 <p>List comprehensions are themselves a nice way of building lists without having to think very hard about loops. Let's say you've got a bunch of these <code>Animal</code> objects:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">animals</span> <span class="o">=</span> <span class="p">[</span><span class="n">Dog</span><span class="p">,</span> <span class="n">Cat</span><span class="p">,</span> <span class="n">Walrus</span><span class="p">,</span> <span class="n">Parakeet</span><span class="p">,</span> <span class="n">Esquilax</span><span class="p">]</span>
 </code></pre></div>
-
 
 <p>Let's say - just like in every OOP tutorial - you want to get the noise each animal makes, in a list. Without list comprehension syntax you might write this loop:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">noises</span> <span class="o">=</span> <span class="p">[]</span>
@@ -56,11 +56,9 @@
 <span class="o">&gt;&gt;&gt;</span>    <span class="n">noises</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">noise</span><span class="p">)</span>
 </code></pre></div>
 
-
 <p>This will give you the correct answer, <code>["woof", "meow", "arf", "caw", "reeee"]</code>, but wouldn't it be nicer to just do</p>
 <div class="highlight"><pre><span></span><code><span class="n">noises</span> <span class="o">=</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">noise</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">]</span>
 </code></pre></div>
-
 
 <p>Yep yep yep yep yep, good good good. List comprehension syntax also lets you do this cool filtering trick where you can add a condition, and it reads almost just like a sentence of English, which is super nifty:</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">a</span><span class="o">.</span><span class="n">is_a_mammal</span><span class="p">()</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span><span class="p">]</span>
@@ -69,45 +67,41 @@
 <span class="p">[</span><span class="n">Dog</span><span class="p">,</span> <span class="n">Cat</span><span class="p">,</span> <span class="n">Walrus</span><span class="p">,</span> <span class="n">Esquilax</span><span class="p">]</span>
 </code></pre></div>
 
-
 <p>I'm sure there's a good reason why <code>NaN</code> evaluates <code>True</code> but I don't know what it is, I don't like it, and I don't trust it.</p>
 <p>ANYWAY AS I WAS SAYING BEFORE the entire justification for this walrus thingy - again, as far as I can tell, at least - is to ease the situation where you're cramming way too much logic into one line already and ending up repeating yourself. Wouldn't this</p>
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">)]</span>
 <span class="p">[(</span><span class="n">Dog</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="p">(</span><span class="n">Walrus</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">Esquilax</span><span class="p">,</span> <span class="n">NaN</span><span class="p">)]</span>
 </code></pre></div>
 
-
 <p>be so much more readable as this:</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">quota</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="p">(</span><span class="n">quota</span><span class="p">:</span><span class="o">=</span><span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="nb">tuple</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">quota</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">animals</span> <span class="k">if</span> <span class="p">(</span><span class="n">quota</span><span class="o">:=</span><span class="n">DogCatcher</span><span class="o">.</span><span class="n">daily_capture_quota</span><span class="p">(</span><span class="n">a</span><span class="p">))]</span>
 <span class="p">[(</span><span class="n">Dog</span><span class="p">,</span> <span class="mi">500</span><span class="p">),</span> <span class="p">(</span><span class="n">Walrus</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">Esquilax</span><span class="p">,</span> <span class="n">NaN</span><span class="p">)]</span>
 </code></pre></div>
-
 
 <p>More readable, right? Right? Eh, sorta, at least? And I think it only executes the repeated part once instead of twice too, which is nice I guess...? I think?</p>
 <p>Maybe this is just me but I love list comprehensions beyond what is reasonable, so I've been abusing the walrus to fuck. And the resulting code is just not legible. I am unwilling to show it to you for business secrets and embarassment reasons, but honestly just picture spaghetti with tangled earbuds in it.</p>
 <p>I saw this Fibonacci implementation in a tweet when walrus was first released and it took me honestly like 15 to 20 minutes of staring right at it before I knew what was happening. And honestly I'm not sure if 15 to 20 minutes is like above average or what</p>
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span><span class="p">:</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="p">:</span><span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="p">[</span><span class="n">x</span><span class="o">:=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]]</span> <span class="o">+</span> <span class="p">[</span><span class="n">x</span> <span class="o">:=</span> <span class="p">[</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
 </code></pre></div>
-
 
 <p>(I found it again on <a href=https://news.ycombinator.com/item?id=21862671>Hacker News</a>)</p>
 <p>The other peeve I have about this thing is that every time I think about it I get <em>I Am The Walrus</em> in my head and it's a cracking tune but ... it's a lot, you know? Custard dripping from a dead dog's eye? Too much to be dealing with when I'm struggling to concentrate on these TPS reports as it is.</p>
 <p>Damn.</p>
 <p>Like, I'm not saying we shouldn't have it, but just do it in moderation. Not too many walri, please.</p>
-    </div><!-- /.entry-content -->
+      </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+    </article>
+  </section>
+                <section id="extras" class="body">
+                </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
 
-</body>
+        </body>
 </html>

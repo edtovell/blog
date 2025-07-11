@@ -1,44 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-        <head>
-                        <meta charset="utf-8" />
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="generator" content="Pelican" />
-                        <title>Ed's Blog - fiction</title>
-                        <link rel="stylesheet" href="../theme/css/main.css" />
-        </head>
+Title: Jaws (except I've Never Seen It)
+Date: 2025-Jul-11
+Modified: 2025-Jul-11
+Category: fiction
+Tags:
+Slug: nsijaws
+Authors: Ed
+Summary:
 
-        <body id="index" class="home">
-                <header id="banner" class="body">
-                        <h1><a href="../">Ed's Blog</a></h1>
-                        <nav><ul>
-                                                <li><a href="../category/dev-stuff.html">dev-stuff</a></li>
-                                                <li class="active"><a href="../category/fiction.html">fiction</a></li>
-                                                <li><a href="../category/misc.html">misc</a></li>
-                        </ul></nav>
-                </header><!-- /#banner -->
+<h2>but I basically know exactly what happens because of how old and famous it is and every movie podcast has done it</h2>
 
-                <aside id="featured" class="body">
-                    <article>
-                        <h1 class="entry-title"><a href="../nsijaws.html">Jaws (except I've Never Seen It)</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2025-07-11T00:00:00+00:00">
-                Published: Fri 11 July 2025
-        </abbr>
-                <br />
-                <abbr class="modified" title="2025-07-11T00:00:00+00:00">
-                        Updated: Fri 11 July 2025
-                </abbr>
+<b>Important performance note: NEW ENGLAND ACCENTS, PEOPLE. IT'S PRONOUNCED "SHAAHK".</b>
 
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="../author/ed.html">Ed</a>
-                </address>
-        <p>In <a href="../category/fiction.html">fiction</a>.</p>
-        
-</footer><!-- /.post-info --><h2>but I basically know exactly what happens because of how old and famous it is and every movie podcast has done it</h2>
+EXT. BEACH - MIDNIGHT - SOME <b>NO GOOD YOUTHS</b> AND A <b>DOOMED SLUT</b> ARE PLAYING A POPULAR YOUTH GAME
 
-<p><b>Important performance note: NEW ENGLAND ACCENTS, PEOPLE. IT'S PRONOUNCED "SHAAHK".</b></p>
-<p>EXT. BEACH - MIDNIGHT - SOME <b>NO GOOD YOUTHS</b> AND A <b>DOOMED SLUT</b> ARE PLAYING A POPULAR YOUTH GAME</p>
 <div style='margin-left:40%;'>ALL TOGETHER</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Three … two … one … Sex Drink!
@@ -79,8 +53,11 @@ Whatever. I’m going for a swim.
 Watch out for sharks!
 </div>
 
-<p>ALL LAUGH AS SHE WALKS AWAY INTO THE SEA</p>
-<p>EXT. BEACH - DAYTIME - IT IS NOW BUSTLING WITH THE NOISE OF SUMMER BEACH FUN. POLICE CHIEF <b>(Mark?) BRODY</b> IS ARGUING WITH <b>MRS BRODY</b> AS THEIR SON <b>GUBBINS</b> PLAYS IN THE SAND</p>
+ALL LAUGH AS SHE WALKS AWAY INTO THE SEA
+
+
+EXT. BEACH - DAYTIME - IT IS NOW BUSTLING WITH THE NOISE OF SUMMER BEACH FUN. POLICE CHIEF <b>(Mark?) BRODY</b> IS ARGUING WITH <b>MRS BRODY</b> AS THEIR SON <b>GUBBINS</b> PLAYS IN THE SAND
+
 <div style='margin-left:40%;'>MRS BRODY</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Oh come on, Mark, you gotta tell me!
@@ -126,7 +103,8 @@ Heeelp! Heeeeelp! A shaaaaaaaaaaaaaaaaaaark! Shaaark attaaaaaack!
 Somebody help! This boy has been shark attacked!
 </div>
 
-<p>THE BRODIES EXCHANGE FEARFUL LOOKS THEN RUN TOWARDS THE SCREAMS</p>
+THE BRODIES EXCHANGE FEARFUL LOOKS THEN RUN TOWARDS THE SCREAMS
+
 <div style='margin-left:40%;'>BRODY</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Let me through! Chief of police! Let me see the boy! Oh fuck that better not be my kid!
@@ -157,7 +135,8 @@ You gotta do something, officer! The shark bit his whole cock clean off! And som
 Oh man, not again. This fuckin shark.
 </div>
 
-<p>BRODY LOOKS AROUND TO SEE THAT A LARGE CROWD HAS FORMED AROUND THE DICKLESS, ASSLESS, DEAD CHILD. A FELLOW <b>COP</b>, ALSO OFF DUTY, SIDLES UP TO HIM</p>
+BRODY LOOKS AROUND TO SEE THAT A LARGE CROWD HAS FORMED AROUND THE DICKLESS, ASSLESS, DEAD CHILD. A FELLOW <b>COP</b>, ALSO OFF DUTY, SIDLES UP TO HIM
+
 <div style='margin-left:40%;'>COP</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Hey boss, you need me to plant this on him? (REVEALS A GUN)
@@ -173,7 +152,9 @@ Nah, it’s too late, they’ve all seen. There’s no way we’re chalking this
 Dunno. Eh, he’s probably fine.
 </div>
 
-<p>INT. TOWN HALL - THE FOLLOWING DAY - <b>BRODY</b> IS ADDRESSING THE CROWD OF ASSEMBLED TOWNSFOLK, INCLUDING THE DEAD BOY’S <b>GRIEVING MOTHER</b>. THE PROJECTED SCREEN BEHIND HIM IS SHOWING EXTREMELY GRAPHIC IMAGES OF THE DEAD BOY WITH BIG LABELLED ARROWS INDICATING HIS BITTEN-OFF DICK AND ASS.</p>
+
+INT. TOWN HALL - THE FOLLOWING DAY - <b>BRODY</b> IS ADDRESSING THE CROWD OF ASSEMBLED TOWNSFOLK, INCLUDING THE DEAD BOY’S <b>GRIEVING MOTHER</b>. THE PROJECTED SCREEN BEHIND HIM IS SHOWING EXTREMELY GRAPHIC IMAGES OF THE DEAD BOY WITH BIG LABELLED ARROWS INDICATING HIS BITTEN-OFF DICK AND ASS.
+
 <div style='margin-left:40%;'>BRODY</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 … So as you can observe by inspection of the bite marks here in the dickal area, and the removal of butt material from the assular region, it seems to me that we’re dealing with some sort of perverted pedophile shark. Possibly communist.
@@ -189,7 +170,8 @@ God damn you, Chief Brody! You told us that it was safe to go in the water! You 
 Yeah sorry I …
 </div>
 
-<p>HE IS CUT OFF BY THE SOUND OF NAILS ON A CHALKBOARD. EVERYBODY CRINGES AT THE SOUND. REVEAL <b>QUINT</b></p>
+HE IS CUT OFF BY THE SOUND OF NAILS ON A CHALKBOARD. EVERYBODY CRINGES AT THE SOUND. REVEAL <b>QUINT</b>
+
 <div style='margin-left:40%;'>QUINT</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 A pedo shark, is it? Well for ten thousand dollars I can …
@@ -230,7 +212,9 @@ Deal.
 Finished? Done? OK. Anyway, here on slide five you can see that the shark only got half of one of his balls
 </div>
 
-<p>INT. BOAT CABIN - EVENING - <b>QUINT</b> AND <b>HOOPER</b> AND <b>BRODY</b> ARE CHATTING OVER BEERS</p>
+
+INT. BOAT CABIN - EVENING - <b>QUINT</b> AND <b>HOOPER</b> AND <b>BRODY</b> ARE CHATTING OVER BEERS
+
 <div style='margin-left:40%;'>QUINT</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 I’m glad you could both join me here today. I think we should do a quick round of introductions, so could we each please say your name, why you’re on my boat, and a fun fact about yourself. I’ll go first: I’m Quint, I’m going to kill that shark, and besides being a fisherman I have a side hustle writing erotic fan fiction. I have this fantastic niche where all the action takes place in a parallel reality where human beings have a strict social hierarchy, like how we used to think wolves had - you know, dominant alphas and submissive betas and such - manifesting as a caste system which I find really enhances the eroticism. At the moment I’m only getting limited traction in some small-time magazines, but I think if I can keep this going for another forty or fifty years then it might really take off. OK, who wants to go next?
@@ -276,7 +260,9 @@ I’m kinda self conscious about being a rich college boy amongst you blue-colla
 And in the war I was on a ship that got sank and a bunch of my buddies died at sea, so I got some Moby Dick stuff going on. I’m mainly doing this for the money, but also its partly a misdirected revenge thing. (SLAPS HIS THIGH) Right, let’s go kill a fuckin shark!
 </div>
 
-<p>EXT. BOAT DECK - MIDDAY - <b>BRODY</b> AND <b>HOOPER</b> ARE WATCHING <b>QUINT</b> THROW TANKS OF COMPRESSED AIR OVERBOARD</p>
+
+EXT. BOAT DECK - MIDDAY - <b>BRODY</b> AND <b>HOOPER</b> ARE WATCHING <b>QUINT</b> THROW TANKS OF COMPRESSED AIR OVERBOARD
+
 <div style='margin-left:40%;'>QUINT</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 You see fellas, normally sharks wouldn’t go for a tank of compressed air.  For sure there’s no nutritional value in it. But this one - this pervert shark is a real sick fuck, and I’m willing to bet he’s into some real particular fetish stuff. If I’m right, that horn-dog is gonna see one of these scuba tanks and immediately start picturing some kinda messed up inflation situation, and he’s gonna chase it and try to fuck it. Then I guess we shoot him or somethin.
@@ -287,7 +273,8 @@ You see fellas, normally sharks wouldn’t go for a tank of compressed air.  For
 In my professional capacity as a shark scientist I can honestly say that this is a brilliant idea that cannot possibly backfire.
 </div>
 
-<p>THE SHARK BURST OUT FROM UNDERNEATH THE DECK, TEARING THE BOAT IN TWO AND SEIZING QUINT IN ITS MOUTH</p>
+THE SHARK BURST OUT FROM UNDERNEATH THE DECK, TEARING THE BOAT IN TWO AND SEIZING QUINT IN ITS MOUTH
+
 <div style='margin-left:40%;'>HOOPER</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 A shark!
@@ -303,13 +290,15 @@ Arrrgh! My dick!
 It’s him!
 </div>
 
-<p>THE SHARK DRAGS QUINT UNDERWATER, THEN COMES BACK AND STARTS TRYING TO FUCK ONE OF THE SCUBA TANKS</p>
+THE SHARK DRAGS QUINT UNDERWATER, THEN COMES BACK AND STARTS TRYING TO FUCK ONE OF THE SCUBA TANKS
+
 <div style='margin-left:40%;'>HOOPER</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Quint was right! Quick, Brody, shoot him!
 </div>
 
-<p>BRODY IS FROZEN IN SHOCK</p>
+BRODY IS FROZEN IN SHOCK
+
 <div style='margin-left:40%;'>HOOPER</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 What’s wrong, man? Shoot the fuckin thing!
@@ -325,89 +314,20 @@ I … I … I’m scared of the ocean! I didn’t think it would become relevant
 It’s OK, buddy, it’s OK … just breathe. Breathe and … uh … think of a dog.
 </div>
 
-<p>BRODY’S PUPILS NARROW. HE IMMEDIATELY DRAWS HIS GUN AND SHOOTS THE SCUBA TANK. IT EXPLODES SENDING BITS OF BOAT AND SHARK VISCERA IN ALL DIRECTIONS.</p>
-<p>WHEN THE SMOKE CLEARS WE SEE BRODY AND HOOPER FLOATING IN THE OCEAN, CLINGING TO PIECES OF WRECKAGE. NEARBY THEY SPY THE LIFELESS SIDEWAYS-FLOATING, PARTIALLY EXPLODED CARCASS OF THE ENORMOUS SHARK</p>
+BRODY’S PUPILS NARROW. HE IMMEDIATELY DRAWS HIS GUN AND SHOOTS THE SCUBA TANK. IT EXPLODES SENDING BITS OF BOAT AND SHARK VISCERA IN ALL DIRECTIONS.
+
+WHEN THE SMOKE CLEARS WE SEE BRODY AND HOOPER FLOATING IN THE OCEAN, CLINGING TO PIECES OF WRECKAGE. NEARBY THEY SPY THE LIFELESS SIDEWAYS-FLOATING, PARTIALLY EXPLODED CARCASS OF THE ENORMOUS SHARK
+
 <div style='margin-left:40%;'>BRODY</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Thanks Hooper. Well, I guess there’s just one thing left to do.
 </div>
 
-<p>HE PLANTS A GUN UNDER THE SHARK’S FIN</p>
+HE PLANTS A GUN UNDER THE SHARK’S FIN
+
 <div style='margin-left:40%;'>BRODY</div>
 <div style='margin-left:20%;margin-right:20%;margin-bottom:10px'>
 Come on, buddy. Let’s go collect that reward money we’ve previously showed no interest in. And maybe I’ll let you fuck my wife!
 </div>
 
-<p>THEY LAUGH TOGETHER. ROLL CREDITS</p>                    </article>
-                </aside><!-- /#featured -->
-                    <section id="content" class="body">
-                        <h1>Other articles</h1>
-                        <hr />
-                        <ol id="posts-list" class="hfeed">
-
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="../127h.html" rel="bookmark"
-                               title="Permalink to 127 Hours (except I've Never Seen It)">127 Hours (except I've Never Seen It)</a></h1>
-                    </header>
-
-                    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-03-17T00:00:00+00:00">
-                Published: Tue 17 March 2020
-        </abbr>
-                <br />
-                <abbr class="modified" title="2020-12-04T00:00:00+00:00">
-                        Updated: Fri 04 December 2020
-                </abbr>
-
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="../author/ed.html">Ed</a>
-                </address>
-        <p>In <a href="../category/fiction.html">fiction</a>.</p>
-        
-</footer><!-- /.post-info -->                        
-                        <a class="readmore" href="../127h.html">read more</a>
-                    </div><!-- /.entry-content -->
-                </article></li>
-
-                <li><article class="hentry">
-                    <header>
-                        <h1><a href="../i_dont_know_honey.html" rel="bookmark"
-                               title="Permalink to I Don't Know, Honey">I Don't Know, Honey</a></h1>
-                    </header>
-
-                    <div class="entry-content">
-<footer class="post-info">
-        <abbr class="published" title="2020-01-06T00:00:00+00:00">
-                Published: Mon 06 January 2020
-        </abbr>
-                <br />
-                <abbr class="modified" title="2020-01-06T00:00:00+00:00">
-                        Updated: Mon 06 January 2020
-                </abbr>
-
-                <address class="vcard author">
-                        By                                 <a class="url fn" href="../author/ed.html">Ed</a>
-                </address>
-        <p>In <a href="../category/fiction.html">fiction</a>.</p>
-        
-</footer><!-- /.post-info -->                        
-                        <a class="readmore" href="../i_dont_know_honey.html">read more</a>
-                    </div><!-- /.entry-content -->
-                </article></li>
-                    </ol><!-- /#posts-list -->
-                    </section><!-- /#content -->
-                <section id="extras" class="body">
-                </section><!-- /#extras -->
-
-                <footer id="contentinfo" class="body">
-                        <address id="about" class="vcard body">
-                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
-                        </address><!-- /#about -->
-
-                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-                </footer><!-- /#contentinfo -->
-
-        </body>
-</html>
+THEY LAUGH TOGETHER. ROLL CREDITS

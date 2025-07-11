@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="utf-8" />
-        <title>Reimplementing CSS in Python for fun frustration and profit also frustration</title>
-        <link rel="stylesheet" href="./theme/css/main.css" />
-</head>
+        <head>
+                        <meta charset="utf-8" />
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                        <meta name="generator" content="Pelican" />
+                        <title>Reimplementing CSS in Python for fun frustration and profit also frustration</title>
+                        <link rel="stylesheet" href="./theme/css/main.css" />
+        </head>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="./">Ed's Blog</a></h1>
-                <nav><ul>
-                    <li class="active"><a href="./category/dev-stuff.html">dev-stuff</a></li>
-                    <li><a href="./category/fiction.html">fiction</a></li>
-                    <li><a href="./category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-  <article>
-    <header>
-      <h1 class="entry-title">
-        <a href="./hue-rotate.html" rel="bookmark"
-           title="Permalink to Reimplementing CSS in Python for fun frustration and profit also frustration">Reimplementing CSS in Python for <del>fun</del> <span style="font-family: monospace">frustration</span> and <del>profit</del> <span style="font-family: monospace">also frustration</span></a></h1>
-    </header>
+        <body id="index" class="home">
+                <header id="banner" class="body">
+                        <h1><a href="./">Ed's Blog</a></h1>
+                        <nav><ul>
+                                                <li class="active"><a href="./category/dev-stuff.html">dev-stuff</a></li>
+                                                <li><a href="./category/fiction.html">fiction</a></li>
+                                                <li><a href="./category/misc.html">misc</a></li>
+                        </ul></nav>
+                </header><!-- /#banner -->
+  <section id="content" class="body">
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="./hue-rotate.html" rel="bookmark"
+             title="Permalink to Reimplementing CSS in Python for fun frustration and profit also frustration">Reimplementing CSS in Python for <del>fun</del> <span style="font-family: monospace">frustration</span> and <del>profit</del> <span style="font-family: monospace">also frustration</span></a></h1>
+      </header>
 
-    <div class="entry-content">
+      <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2022-06-09T00:00:00+00:00">
                 Published: Thu 09 June 2022
         </abbr>
-		<br />
-        <abbr class="modified" title="2022-06-09T00:00:00+00:00">
-                Updated: Thu 09 June 2022
-        </abbr>
+                <br />
+                <abbr class="modified" title="2022-06-09T00:00:00+00:00">
+                        Updated: Thu 09 June 2022
+                </abbr>
 
-        <address class="vcard author">
-                By                         <a class="url fn" href="./author/ed.html">Ed</a>
-        </address>
-<p>In <a href="./category/dev-stuff.html">dev-stuff</a>.</p>
-
-</footer><!-- /.post-info -->      <p>I am currently doing a thing for work (NDAs, business secrets, shhh) where I have to rewrite somebody else’s old project. The project involves processing images before they get fed into some machine learning model. I don’t know much about image processing, so that’s fun! It also, as it turns out, does some of this image processing in CSS. Oh yes it does - you know, that famous image processing framework, CSS! Yeah that one, the stylesheets! I am a CSS programmer now. I am a full stack CSS developer.</p>
+                <address class="vcard author">
+                        By                                 <a class="url fn" href="./author/ed.html">Ed</a>
+                </address>
+        <p>In <a href="./category/dev-stuff.html">dev-stuff</a>.</p>
+        
+</footer><!-- /.post-info -->        <p>I am currently doing a thing for work (NDAs, business secrets, shhh) where I have to rewrite somebody else’s old project. The project involves processing images before they get fed into some machine learning model. I don’t know much about image processing, so that’s fun! It also, as it turns out, does some of this image processing in CSS. Oh yes it does - you know, that famous image processing framework, CSS! Yeah that one, the stylesheets! I am a CSS programmer now. I am a full stack CSS developer.</p>
 <p>The naive might imagine this a simple task: there are, after all, significantly more powerful and numerous image libraries for Python. And I know enough about images to know that they are actually just a long list of pixels, and a pixel is just a 3-tuple of Red, Green and Blue values - that’s the RGB model. Approximating a hue-rotation should be trivial - surely you could simply take your regular old RGB image and convert it into one of the hue-specifying formats, let’s say HSV (Hue, Saturation, Value), then isolate the hue channel, adjust it, and recompose.</p>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
 <span class="n">hsv</span> <span class="o">=</span>  <span class="n">img</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="s2">&quot;HSV&quot;</span><span class="p">)</span>
 <span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="n">hsv</span><span class="o">.</span><span class="kp">split</span><span class="p">()</span>
 <span class="n">H</span> <span class="o">+=</span> <span class="o">...</span>  <span class="c1"># &lt;something_or_other&gt;</span>
 <span class="k">return</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="kp">array</span><span class="p">([</span><span class="n">H</span><span class="p">,</span> <span class="n">S</span><span class="p">,</span> <span class="n">V</span><span class="p">]))</span>
 </code></pre></div>
-
 
 <p>And in a saner world, yes, this would make absolute sense. It <em>should</em> work this way. It even <em>could</em>, for any other use-case, perform a perfectly suitable hue-rotation. But sanity is not one of the project requirements: my job is to precisely reimplement the CSS function <code>hue-rotate</code>, and CSS does not work the sane way. CSS is far too clever for that.</p>
 <p>It took me far too long to find out how CSS image filters work. I was wary of getting muddled with the conversion between RGB and HSV modes, but on that front there was good news! It turns out that CSS skips the mode conversion step altogether! It does it right in the RGB space! Awesome!</p>
@@ -65,20 +66,20 @@
 <p>Well … actually not all browsers.</p>
 <p><img alt="one of these things is not like the others" src="./images/browser_compatibility.png"></p>
 <p>Also every time I saw RGB my brain said "Ruth Gader Binsberg" which is quite funny.</p>
-    </div><!-- /.entry-content -->
+      </div><!-- /.entry-content -->
 
-  </article>
-</section>
-        <section id="extras" class="body">
-        </section><!-- /#extras -->
+    </article>
+  </section>
+                <section id="extras" class="body">
+                </section><!-- /#extras -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+                <footer id="contentinfo" class="body">
+                        <address id="about" class="vcard body">
+                                Proudly powered by <a rel="nofollow" href="https://getpelican.com/">Pelican</a>, which takes great advantage of <a rel="nofollow" href="https://www.python.org/">Python</a>.
+                        </address><!-- /#about -->
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+                        <p>The theme is by <a rel="nofollow" href="https://www.smashingmagazine.com/2009/08/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+                </footer><!-- /#contentinfo -->
 
-</body>
+        </body>
 </html>
